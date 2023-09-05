@@ -1,6 +1,6 @@
 import type { Actions } from './$types';
 import { fail } from '@sveltejs/kit';
-
+import { getContext } from 'svelte';
 
 export const load: PageServerLoad = async (event) => {
   return event.locals.user;

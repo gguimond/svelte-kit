@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PageData, ActionData } from './$types';
   import { enhance } from '$app/forms';
+  import { getContext } from 'svelte';
 
   export let data: PageData;
   
@@ -9,6 +10,7 @@
   function showTip(event) {
     alert('about to submit');
   }
+  const user = getContext('user');
 </script>
 {#if form?.missing}<p class="error">The fields are required</p>{/if}
 {#if form?.success}
@@ -28,3 +30,4 @@
   <button on:click={showTip}>Log in</button>
 </form>
 {/if}
+User active : {$user.isActive}
