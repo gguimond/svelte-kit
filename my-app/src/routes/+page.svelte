@@ -19,6 +19,7 @@
 <h1>Welcome to SvelteKit</h1>
 <div>{data.myvar}</div>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<a href="/login">Authentification</a>
 <a href="/about">About my site</a>
 <button on:click={getData}>Fetch data</button>
 {mydata}
